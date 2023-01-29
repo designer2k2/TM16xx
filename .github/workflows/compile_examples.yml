@@ -17,3 +17,4 @@ jobs:
         with:
           libraries: |
             - source-path: ./
+            - name: "Adafruit GFX Library"
