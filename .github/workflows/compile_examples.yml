@@ -1,0 +1,19 @@
+name: Compile Examples
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  compile-examples:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Compile examples
+        uses: arduino/compile-sketches@v1
+        with:
+          libraries: |
+            - source-path: ./
